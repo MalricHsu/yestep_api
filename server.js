@@ -59,3 +59,14 @@ server.listen(port, "0.0.0.0", () => {
   console.log(`📡 目前 Port：${port}`);
   console.log(`📂 目前資料庫檔案位置：${dbPath}`);
 });
+
+function Child({ posts }) {
+  return posts.map((post) => {
+    return (
+      <li>
+        <h3>{post.title}</h3>
+        <p>{post.body}</p>
+      </li>
+    );
+  });
+}
