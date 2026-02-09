@@ -1236,7 +1236,7 @@
       "chips": ["交通便利", "時程短", "無需裝備"],
       "title": "忙裡偷閒",
       "desc": "在城市與山林之間，不用遠行、不必準備太多，就能走進自然、放慢腳步。挑一條適合今天心情的步道，讓呼吸回到剛剛好的節奏。",
-      "bg": "url(https://images.unsplash.com/photo-1572715381359-002b1eabd56b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+      "bg": "https://images.unsplash.com/photo-1572715381359-002b1eabd56b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": "relaxing",
@@ -1244,7 +1244,7 @@
       "chips": ["瀑布", "森林", "芬多精"],
       "title": "舒壓放鬆",
       "desc": "把壓力留在山下，跟著水聲與樹影慢慢走，讓呼吸變深、心情變輕。",
-      "bg": "url(https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1470&auto=format&fit=crop)"
+      "bg": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1470&auto=format&fit=crop"
     },
     {
       "id": "familyHiking",
@@ -1252,7 +1252,7 @@
       "chips": ["平緩", "好走", "全家同樂"],
       "title": "親子步道",
       "desc": "大手牽小手一起出發，選一條不累又有風景的路，讓孩子也愛上戶外。",
-      "bg": "url(https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1470&auto=format&fit=crop)"
+      "bg": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1470&auto=format&fit=crop"
     },
     {
       "id": "tungBlossom",
@@ -1260,10 +1260,11 @@
       "chips": ["四月雪", "春季限定", "浪漫花雨"],
       "title": "桐花步道",
       "desc": "走進會下雪的春天，沿路都是白色花毯與微風的香氣。",
-      "bg": "url(https://images.unsplash.com/photo-1746180340407-1d7f647cf61c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+      "bg": "https://images.unsplash.com/photo-1746180340407-1d7f647cf61c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ],
   "favorites": [],
   "itinerary": [],
-  "registrations": []
+  "registrations": [],
+  "post": []
 }
