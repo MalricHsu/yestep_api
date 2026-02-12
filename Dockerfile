@@ -1,5 +1,5 @@
 # 1. 使用 Node.js 20 輕量版
-FROM node:20-alpine
+FROM public.ecr.aws/docker/library/node:20-alpine
 
 # 2. 設定工作目錄
 WORKDIR /app
@@ -22,3 +22,14 @@ EXPOSE 8080
 
 # 8. 啟動
 CMD ["npm", "start"]
+
+# FROM node:22-alpine  
+# LABEL "language"="nodejs"  
+# WORKDIR /src  
+# COPY package*.json ./  
+# RUN npm install  
+# COPY . .  
+# EXPOSE 8080  
+# ENV NODE_ENV=production  
+# ENV PORT=8080  
+# CMD ["npm", "start"]  
