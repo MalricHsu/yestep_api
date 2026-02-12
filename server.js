@@ -53,7 +53,7 @@ server.use(router);
 
 // --- [啟動伺服器] ---
 // 優先讀取 Zeabur 給予的 Port，若無則預設 3000 (本地開發用)
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 // 關鍵點：一定要監聽 '0.0.0.0'，這代表接受來自容器外部的所有連線
 server.listen(port, "0.0.0.0", () => {
