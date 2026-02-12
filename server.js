@@ -28,6 +28,8 @@ if (!fs.existsSync(dbPath)) {
     reviews: [],
     favorites: [],
     itinerary: [],
+    registrations: [],
+    post: [],
   };
   // 將結構轉為 JSON 字串並寫入檔案，格式化縮進為 2 格
   fs.writeFileSync(dbPath, JSON.stringify(initialData, null, 2));
