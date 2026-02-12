@@ -8,17 +8,20 @@ const server = jsonServer.create();
 const middlewares = jsonServer.defaults(); // 包含 Logger, Static, CORS 等功能
 
 // --- [核心設定：資料庫路徑] ---
-// 判斷當前環境：如果環境變數 NODE_ENV 為 production，代表在雲端 (Zeabur)
 const isProd = process.env.NODE_ENV === "production";
 
-// 設定資料夾：雲端使用 /data (持久化空間)，本地開發使用當前目錄 (__dirname)
-const dbDirectory = isProd ? "/data" : __dirname;
-
-// 組合出 db.json 的完整絕對路徑
+// 建議統一使用動態路徑處理，避免在不同環境下路徑噴錯
+const dbDirectory = isProd ? "/data" : path.join(process.cwd(), "data");
 const dbPath = path.join(dbDirectory, "db.json");
 
-// --- [核心設定：自動初始化] ---
-// 當 Zeabur 第一次掛載空白硬碟時，/data 裡可能沒檔案，這段會自動補齊結構避免當機
+// --- [核心設定：自動初始化與目錄建立] ---
+// 1. 先確保資料夾存在 (這就是解決你 Log 報錯的關鍵)
+if (!fs.existsSync(dbDirectory)) {
+  console.log(`📁 建立目錄: ${dbDirectory}`);
+  fs.mkdirSync(dbDirectory, { recursive: true });
+}
+
+// 2. 再確保 db.json 檔案存在
 if (!fs.existsSync(dbPath)) {
   console.log("⚠️ 偵測到環境中無資料庫檔案，正在初始化基本結構...");
   const initialData = {
@@ -31,7 +34,6 @@ if (!fs.existsSync(dbPath)) {
     registrations: [],
     post: [],
   };
-  // 將結構轉為 JSON 字串並寫入檔案，格式化縮進為 2 格
   fs.writeFileSync(dbPath, JSON.stringify(initialData, null, 2));
 }
 
